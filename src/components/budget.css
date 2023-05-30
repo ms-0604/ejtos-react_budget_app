@@ -1,0 +1,43 @@
+.quantity-nav{
+    float: right;
+    position: relative;
+    height: 42px;
+  }
+  .quantity-button.quantity-up {
+    position: absolute;
+    height: 50%;
+    top: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    font-family: "FontAwesome";
+    border-radius: 0 4px 0 0;
+    line-height: 1.6;
+  }
+  .quantity-button.quantity-down {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    font-family: "FontAwesome";
+    border-radius: 0 0 4px 0;
+  }
+  .quantity-button {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    width: 21px;
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+    font-family: "FontAwesome" !important;
+    line-height: 1.5;
+    padding: 0;
+    background: #FAFAFA;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  

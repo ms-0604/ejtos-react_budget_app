@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const AllocationForm = (props) => {
-    const { dispatch,remaining  } = useContext(AppContext);
+    const { dispatch,remaining, currency } = useContext(AppContext);
 
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
@@ -33,6 +33,13 @@ const AllocationForm = (props) => {
             }
     };
 
+    // const changeCurrency = (val) =>{
+    //     dispatch({
+    //         type: 'CHG_CURRENCY',
+    //         payload: val
+    //     });
+    // }
+
     return (
         <div>
             <div className='row'>
@@ -58,13 +65,22 @@ const AllocationForm = (props) => {
                         <option defaultValue value="Add" name="Add">Add</option>
                 <option value="Reduce" name="Reduce">Reduce</option>
                   </select>
-
+                  {/* <div className="input-group-prepend" style={{ marginLeft: '2rem' }}>
+                <label className="input-group-text" htmlFor="inputGroupSelect02">currency (Pound)</label>
+                  </div>
+                  <select className="custom-select" id="inputGroupSelect02" onChange={(event) => changeCurrency(event.target.value)}>
+                <option defaultValue value="$" name="Add">$ Dollar</option>
+                <option value="£" name="Reduce">£ Pound</option>
+                <option value="€" name="Reduce">€ Euro</option>
+                <option value="₹" name="Reduce">₹ Ruppee</option>
+                  </select> */}
+                  <label class="input-group-text" for="inputGroupSelect02">{currency}</label>
                     <input
                         required='required'
                         type='number'
                         id='cost'
                         value={cost}
-                        style={{ marginLeft: '2rem' , size: 10}}
+                        style={{ size: 10}}
                         onChange={(event) => setCost(event.target.value)}>
                         </input>
 
